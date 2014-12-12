@@ -4509,9 +4509,10 @@ SEPARATOR is ignored in this case."
 (defmacro flycheck-def-args-var (symbol checker &rest custom-args)
   "Define SYMBOL as argument variable for CHECKER.
 
-SYMBOL is declared as customizable buffer-local variable using
-`defcustom' to provide an option for arbitrary arguments for the
-given syntax CHECKER.  CUSTOM-ARGS is forwarded to `defcustom'.
+SYMBOL is declared as customizable, risky and buffer-local
+variable using `defcustom' to provide an option for arbitrary
+arguments for the given syntax CHECKER.  CUSTOM-ARGS is forwarded
+to `defcustom'.
 
 Use the `eval' form to splice this variable into the
 `:command'."
